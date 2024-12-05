@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Movie Recommender</title>
-    <style>            html code 
+    <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
@@ -15,31 +15,37 @@
             align-items: center;
             height: 100vh;
             transition: background-color 0.3s ease;
+            overflow: hidden; /* Prevents scrollbars */
         }
         .chat-container {
-            width: 350px;
-            height: 550px; /* Adjusted height to accommodate the heading */
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
+            width: 400px;
+            height: 600px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
             background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
             transition: background-color 0.3s ease;
-            text-align: center;
         }
         h1 {
-            margin: 10px 0;
-            font-size: 24px;
+            margin: 20px 0;
+            font-size: 28px;
             color: #0078d7;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
         a {
             position: absolute;
             top: 20px;
             left: 20px;
             text-decoration: none;
-            color: #fff;
+            color: white;
             background-color: #0078d7;
             padding: 10px 20px;
-            border-radius: 5px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
         }
         a:hover {
             background-color: #005bb5;
@@ -49,20 +55,29 @@
             top: 20px;
             right: 20px;
             background-color: #0078d7;
-            color: #fff;
+            color: white;
             border: none;
-            padding: 10px;
-            border-radius: 5px;
+            padding: 10px 20px;
+            border-radius: 8px;
             cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
         }
         .toggle-switch:hover {
             background-color: #005bb5;
         }
         .dark-mode {
-            background-color: #1d1d1d;
+            background-color: #121212;
         }
         .dark-mode .chat-container {
-            background-color: #333333;
+            background-color: #292929;
+            color: #ffffff;
+        }
+        iframe {
+            border: none;
+            flex-grow: 1; /* Makes the iframe take up remaining space */
+            width: 100%;
+            border-radius: 0 0 15px 15px;
         }
     </style>
 </head>
@@ -76,8 +91,7 @@
     <iframe
         src="https://cdn.botpress.cloud/webchat/v2/shareable.html?botId=1d67db24-aa49-40b4-b09a-7a1321818cbd"
         width="100%"
-        height="100%"
-        frameborder="0">
+        height="100%">
     </iframe>
 </div>
 
