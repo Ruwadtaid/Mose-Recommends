@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Recommendation Hub</title>
+    <style>
+        body {
+            background-color: #1c1c1c; /* IMDb's dark theme */
+            color: #f5c518; /* IMDb's signature yellow */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            background-color: rgba(20, 20, 20, 0.9);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 80%;
+            max-width: 600px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            margin: 0 0 20px;
+        }
+        .button {
+            margin-top: 20px;
+            padding: 15px 25px;
+            background-color: #f5c518;
+            color: #000;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .button:hover {
+            background-color: #e0b909;
+        }
+        .running-cockroach {
+            position: absolute;
+            bottom: 10px;
+            left: -100px;
+            width: 80px;
+            animation: runAcross 7s linear infinite;
+        }
+        @keyframes runAcross {
+            0% { left: -100px; transform: scaleX(1); }
+            50% { transform: scaleX(1); }
+            100% { left: 100%; transform: scaleX(-1); }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to Movie Recommendation Hub!</h1>
+        <a href="chatbot.html" class="button">Get Recommendations</a>
+    </div>
+    <img src="" alt="" class="running-cockroach">
+</body>
+</html>
